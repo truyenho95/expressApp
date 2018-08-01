@@ -1,4 +1,5 @@
 const express = require('express');
+const debug = require('debug')('app:bookRouter');
 
 const bookRouter = express.Router();
 

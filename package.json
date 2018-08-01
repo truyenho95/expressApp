@@ -4,7 +4,7 @@
   "description": "Build Web App with Nodejs and Express",
   "main": "index.js",
   "scripts": {
-    "start": "set DEBUG=app & nodemon app.js",
+    "start": "set DEBUG=app,app:* & nodemon app.js",
     "lint": "eslint app.js"
   },
   "author": "Justin Ho",
@@ -16,6 +16,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
+    "mongodb": "^3.1.1",
     "morgan": "^1.9.0",
     "nodemon": "^1.18.3",
     "popper.js": "^1.14.3",

@@ -12,6 +12,7 @@ const nav = [
   { link: '/authors', title: 'Authors' }
 ];
 const bookRouter = require('./src/routes/bookRouter')(nav);
+const adminRouter = require('./src/routes/adminRouter')(nav);
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public')));
@@ -24,6 +25,8 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.use('/books', bookRouter);
+app.use('/admin', adminRouter);
+
 app.get('/', (req, res) => {
   // res.sendFile(path.join(__dirname, 'views/index.html'));
   res.render(
